@@ -18,7 +18,7 @@ gcloud --quiet container clusters get-credentials coding-dojo
 
 docker build -t gcr.io/coding-dojo-251421/coding-dojo:$CIRCLE_SHA1 .
 
-gcloud docker -- push gcr.io/${PROJECT_ID}/coding-dojo:$CIRCLE_SHA1
+gcloud docker -- push gcr.io/coding-dojo-251421/coding-dojo:$CIRCLE_SHA1
 
 kubectl set image deployment/coding-dojo coding-dojo=gcr.io/coding-dojo-251421/coding-dojo:$CIRCLE_SHA1
 
