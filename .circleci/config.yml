@@ -19,9 +19,8 @@ jobs:
       - image: rolandjitsu/gcloud-node
     working_directory: ~/kataIdukay
     steps:
-      - run: 
-          name: test
-          command: ls
+      - checkout
+      - setup_remote_docker
       - run: 
           name: Deploy
           command: ./deployment.sh
