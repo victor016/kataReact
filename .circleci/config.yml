@@ -20,6 +20,9 @@ jobs:
     working_directory: ~/kataIdukay
     steps:
       - run: 
+          name: test
+          command: ls
+      - run: 
           name: Deploy
           command: ./deployment.sh
 workflows:
