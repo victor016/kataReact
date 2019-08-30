@@ -11,9 +11,6 @@ jobs:
           name: Install Dependecies
           command: npm install
       - run: 
-          name: Copy build files to server
-          command: cp ./ci/deployment.sh
-      - run: 
           name: Deploy
           command: ./deployment.sh
 workflows:
