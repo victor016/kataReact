@@ -16,12 +16,11 @@ jobs:
 
   deploy:
     docker:
-      - image: rolandjitsu/gcloud-node
+      - image: wecs/circle-ci-gcloud-node:0.1.0
     working_directory: ~/kataIdukay
     steps:
-      - run: 
-          name: test
-          command: ls
+      - checkout
+      - setup_remote_docker
       - run: 
           name: Deploy
           command: ./deployment.sh
