@@ -14,7 +14,7 @@ gcloud --quiet config set container/cluster coding-dojo-victors
 
 gcloud config set compute/zone us-central1-a
 
-gcloud --quiet container clusters get-credentials coding-dojo-victors
+gcloud --quiet container clusters get-credentials coding-dojo
 
 docker build -t gcr.io/coding-dojo-251421/coding-dojo:$CIRCLE_SHA1 .
 
