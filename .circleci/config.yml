@@ -16,7 +16,7 @@ jobs:
 
   deploy:
     docker:
-      - image: wecs/circle-ci-gcloud-node:victors
+      - image: wecs/circle-ci-gcloud-node:0.1.0
     working_directory: ~/kataIdukay
     steps:
       - checkout
